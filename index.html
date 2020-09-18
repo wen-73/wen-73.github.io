@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            perspective: 900px;
+        }
+        
+        .box {
+            width: 500px;
+            transform-style: preserve-3d;
+            height: 500px;
+            position: relative;
+            transform: rotatex(-20deg);
+            margin: 300px auto;
+        }
+        
+        .wrap {
+            transform-style: preserve-3d;
+            position: absolute;
+            transform: rotatex(20deg);
+            left: 150px;
+            top: 150px;
+            width: 200px;
+            height: 200px;
+            animation: rotate 5s infinite linear;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotatey(0) rotatex(0) rotatez(0);
+            }
+            to {
+                transform: rotatey(-360deg) rotatex(-360deg) rotatez(-360deg);
+            }
+        }
+        
+        .wrap div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            /* background-color: #e91212; */
+            opacity: 0.4;
+            transition: all 1s;
+        }
+        
+        .wrap:hover div {
+            opacity: 0.8;
+        }
+        
+        .wrap .side1 {
+            transform: translatez(100px);
+        }
+        
+        .wrap .side2 {
+            transform: rotatey(180deg) translatez(100px);
+        }
+        
+        .wrap .side3 {
+            transform: rotatex(90deg) translatez(100px);
+        }
+        
+        .wrap .side4 {
+            transform: rotatex(-90deg) translatez(100px);
+        }
+        
+        .wrap .side5 {
+            transform: rotatey(90deg) translatez(100px);
+        }
+        
+        .wrap .side6 {
+            transform: rotatey(-90deg) translatez(100px);
+        }
+        
+        .wrap:hover .side1 {
+            transform: translatez(200px);
+        }
+        
+        .wrap:hover .side2 {
+            transform: rotatey(180deg) translatez(200px);
+        }
+        
+        .wrap:hover .side3 {
+            transform: rotatex(90deg) translatez(200px);
+        }
+        
+        .wrap:hover .side4 {
+            transform: rotatex(-90deg) translatez(200px);
+        }
+        
+        .wrap:hover .side5 {
+            transform: rotatey(90deg) translatez(200px);
+        }
+        
+        .wrap:hover .side6 {
+            transform: rotatey(-90deg) translatez(200px);
+        }
+        
+        .wrap1 {
+            transform-style: preserve-3d;
+            /* transform: rotatex(20deg); */
+            position: absolute;
+            top: 225px;
+            left: 225px;
+            width: 50px;
+            height: 50px;
+            animation: rotate 5s infinite linear 2s;
+        }
+        
+        .wrap1:hover {
+            animation-play-state: paused;
+        }
+        
+        .wrap1 .side1 {
+            transform: translatez(25px);
+        }
+        
+        .wrap1 .side2 {
+            transform: rotatey(180deg) translatez(25px);
+        }
+        
+        .wrap1 .side3 {
+            transform: rotatex(90deg) translatez(25px);
+        }
+        
+        .wrap1 .side4 {
+            transform: rotatex(-90deg) translatez(25px);
+        }
+        
+        .wrap1 .side5 {
+            transform: rotatey(90deg) translatez(25px);
+        }
+        
+        .wrap1 .side6 {
+            transform: rotatey(-90deg) translatez(25px);
+        }
+        
+        .wrap1 div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            /* background-color: #e91212; */
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="wrap">
+            <div class="side1"><img src="./day_06/imgs/liqingzhao_2.png" alt=""></div>
+            <div class="side2"><img src="./day_06/imgs/liqingzhao_2.png" alt=""></div>
+            <div class="side3"><img src="./day_06/imgs/liqingzhao_2.png" alt=""></div>
+            <div class="side4"><img src="./day_06/imgs/liqingzhao_2.png" alt=""></div>
+            <div class="side5"><img src="./day_06/imgs/liqingzhao_2.png" alt=""></div>
+            <div class="side6"><img src="./day_06/imgs/liqingzhao_2.png" alt=""></div>
+
+        </div>
+        <div class="wrap1">
+            <div class="side1"><img src="./day_06/imgs/liqingzhao_3.png" alt=""></div>
+            <div class="side2"><img src="./day_06/imgs/liqingzhao_3.png" alt=""></div>
+            <div class="side3"><img src="./day_06/imgs/liqingzhao_3.png" alt=""></div>
+            <div class="side4"><img src="./day_06/imgs/liqingzhao_3.png" alt=""></div>
+            <div class="side5"><img src="./day_06/imgs/liqingzhao_3.png" alt=""></div>
+            <div class="side6"><img src="./day_06/imgs/liqingzhao_3.png" alt=""></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
